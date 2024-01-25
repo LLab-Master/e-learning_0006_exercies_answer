@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML入門</title>
+    <link rel="icon" href="sample.png">
+    <link rel="stylesheet" href="style.css"><!-- css 外部参照 -->
+</head>
+<body>
+    <!-- css 内部参照 -->
+    <style>
+        .text-center{
+            text-align: center;
+        }
+    </style>
+
+    <!-- css インライン -->
+    <h1 style="color: green;" class="text-center">お問い合わせ</h1>
+    <hr>
+
+    <table border="1">
+        <tr>
+            <th>見出しセル</th>
+            <th>見出しセル</th>
+            <th>見出しセル</th>
+            <th>見出しセル</th>
+            <th>見出しセル</th>
+        </tr>
+        <tr>
+            <td>セル1</td>
+            <td>セル2</td>
+            <td>セル3</td>
+            <td>セル4</td>
+            <td>セル5</td>
+        </tr>
+        <tr>
+            <td>セル1</td>
+            <td>セル2</td>
+            <td>セル3</td>
+            <td>セル4</td>
+            <td>セル5</td>
+        </tr>
+        <tr>
+            <td>セル1</td>
+            <td>セル2</td>
+            <td>セル3</td>
+            <td>セル4</td>
+            <td>セル5</td>
+        </tr>
+        <tr>
+            <td>セル1</td>
+            <td>セル2</td>
+            <td>セル3</td>
+            <td>セル4</td>
+            <td>セル5</td>
+        </tr>
+    </table>
+    <hr>
+
+    <table border="1">
+        <tr>
+            <th colspan="5" class="bc-gray">見出しセル</th>
+        </tr>
+        <tr>
+            <td>セル1</td>
+            <td>セル2</td>
+            <td>セル3</td>
+            <td>セル4</td>
+            <td>セル5</td>
+        </tr>
+        <tr>
+            <td>セル1</td>
+            <td>セル2</td>
+            <td rowspan="3" class="bc-gray">セル3</td>
+            <td>セル4</td>
+            <td>セル5</td>
+        </tr>
+        <tr>
+            <td>セル1</td>
+            <td>セル2</td>
+
+            <td>セル4</td>
+            <td>セル5</td>
+        </tr>
+        <tr>
+            <td>セル1</td>
+            <td>セル2</td>
+
+            <td>セル4</td>
+            <td>セル5</td>
+        </tr>
+    </table>
+    <hr>
+    <p>display: inline-block</p>
+    <span class="box box1"></span>
+    <span class="box box2"></span>
+    <p>display: flex</p>
+    <div class="flex_box">
+        <span class="box1"></span>
+        <span class="box2"></span>
+    </div>
+    <hr>
+    <span class="text-content">
+        <p>
+            HTML（Hypertext Markup Language）は、ウェブページを作成するための標準的なマークアップ言語です。
+            <br><!-- 改行 -->
+            HTMLは、テキストベースの文書を構造化し、コンテンツに意味を与えるためのタグを使用します。
+            <br>
+            <hr><!-- 横線 -->
+            HTMLは、<br>
+            ページの構造とコンテンツを定義するための重要な言語であり、<br>
+            CSS（スタイルシート）やJavaScriptと組み合わせて動的かつ魅力的なウェブページを作成するための基盤となります。
+        </p>
+    </span>
+    <hr>
+
+    <!-- リスト -->
+    <ul>
+        <li><a href="https://www.google.co.jp/" rel="noopener noreferrer">Googleへのリンク</a></li>
+        <li><a href="https://www.yahoo.co.jp/" target="_parent" rel="noopener noreferrer">yahoo!へのリンク</a></li>
+    </ul>
+    <hr>
+    <ol>
+        <li><a href="https://www.google.co.jp/" rel="noopener noreferrer">Googleへのリンク</a></li>
+        <li><a href="https://www.yahoo.co.jp/" target="_blank" rel="noopener noreferrer">yahoo!へのリンク</a></li>
+    </ol>
+    <hr>
+    
+    <!-- フォーム -->
+    <form action="https://www.htmlれんしゅう.xxx" method="post">
+        <div>
+            <label for="user-name">ユーザー名</label>
+            <input type="text" name="user-name" id="user-name" required>
+        </div>
+        <div>
+            <label for="password">パスワード</label>
+            <input type="password" name="password" id="password">
+        </div>
+        <div>
+            <label for="e-mail">メールアドレス</label>
+            <input type="email" name="e-mail" id="e-mail">
+        </div>
+        <div>
+            <label for="age">年齢</label>
+            <input type="number" name="age" id="age" value="40" readonly>
+        </div>
+        <div>
+            <label for="appeal-point">アピールポイント</label>
+            <textarea name="appeal-point" id="appeal-point"></textarea>
+        </div>
+        <div class="">
+            <input type="hidden" name="id" value="999">
+        </div>
+        
+        <div class="">
+            <p>東北地方で、最も働きたいのは何処ですか？</p>
+            <select name="touhoku">
+                <option value="aokmori">青森県</option>
+                <option value="iwate" selected>岩手県</option>
+                <option value="miyagi">宮城県</option>
+                <option value="akita">秋田県</option>
+                <option value="yamagata">山形県</option>
+                <option value="fukusima">福島県</option>
+            </select>
+        </div>
+        <div class="">
+            <input type="radio" name="gender" value="m" id="m">
+            <label for="m">男性</label>
+            <input type="radio" name="gender" value="f" id="f">
+            <label for="f">女性</label>
+        </div>
+        <div>
+            <p>特異なプログラミング言語をチェックして下さい</p>
+            <input type="checkbox" name="program" value="HTML5/CSS3" id="HTML5/CSS3">
+            <label for="HTML5/CSS3">HTML5/CSS3</label>
+            <input type="checkbox" name="program" value="JavaScript" id="JavaScript">
+            <label for="JavaScript">JavaScript</label>
+            <input type="checkbox" name="program" value="Python" id="Python">
+            <label for="Python">Python</label>
+            <input type="checkbox" name="program" value="Java" id="Java">
+            <label for="Java">Java</label>
+            <input type="checkbox" name="program" value="React" id="React">
+            <label for="React">React</label>
+        </div>
+        
+        <!-- ルビ -->
+        <h1><ruby>日本橋<rt>にほんばじ</rt></ruby></h1>
+        <h1><ruby class="ruby-bottom">二本箸<rt>にほんはし</rt></ruby></h1>
+        
+        
+        
+        
+        <button type="submit">登録</button><button type="reset">リセット</button>
+    </form>
+    <hr>
+    
+    
+    
+
+
+
+<!-- 
+
+＜HTML問題＞
+＜共通仕様＞
+回答は、「ブラウザで正しく表示できる事」「ソースコード」の２点を、太田にレビューして下さい。
+HTMLファイルとCSSファイルを、それぞれ1つづつ作成して、最後の問題まで使います。
+＜目標＞
+２時間半、出来れば２時間以内 ※追加問題は除く
+【問１】
+ショートカット機能で、HTMLのひな形を作成する。
+言語を"Ja"に設定する。
+ブラウザのタブに表示するタイトルを「HTML入門」に設定する。
+"ファビコン"とは何か？を調べて、任意の画像を設定して下さい。
+【問２】
+画面最上部に、見出し"お問い合わせ"を表示する。
+【問３】
+横５＊縦４マスのテーブルを作成して下さい。
+最上段は、横１マスに結合して下さい。
+中央列の３～５行目を、縦に結合して下さい
+【問４】
+CSSインラインで、問２の見出しの文字の色を"緑"に変更する。
+【問５】
+CSS内部参照で、問２の見出しを、中央寄せにする。
+【問６】
+下記をCSS１行で書いてください
+CSS外部参照で、問３のテーブルの結合したセルの背景色を"灰色"に設定する。
+【問７】
+「黒枠で白い正四角形１００ｐｘ」 と 「枠無しで青い正四角形」を表示して下さい。
+【問８】
+問７の四角形２つを横並びに表示する。
+【問９】
+HTMLを説明する長い文章を、chatGBTで作成して、段落で表示する。
+段落の途中で、改行を５回行って下さい。
+段落の途中で、タグを使って"横線"を入れて下さい。
+【問１０】
+記号（●）のリストを作成する。
+内容
+Googleのリンクを作成する。
+Yahooのリンクを作成して、新しいウィンドウで開くようにする。
+【問１１】
+連番数字のリストを作成する。
+内容は任意
+【問１２】
+ユーザー登録フォームを作成する。
+送信先は"https://www.htmlれんしゅう.xxx"
+メソッドは"POST"
+登録ボタンを作成して下さい
+【問１３】
+問１２のフォームに、下記の入力欄を作成して下さい。
+ユーザー名、入力必須
+パスワード
+メールアドレス、
+年齢
+アピールポイント（複数行）
+非表示で、id=999を送信する
+リセットボタン　※表示できればよい
+【問１４】
+問１２のフォームに、下記の入力欄を作成して下さい。
+ドロップダウン、住所を東北地方の県から選択
+性別を選択する
+得意なプログラム言語を５種類から選択する。（複数回答可）
+【問１５】
+問１３の"入力欄：年齢"に初期値=20にする。
+問１３の"入力欄：年齢"を編集不可にする。
+【問１６】
+問１４のドロップダウンの初期値を"岩手県"にして下さい。
+【追加問題１】
+見出し"日本橋"を表示して、ルビ"にほんばじ"を上段に表示して下さい
+見出し"二本箸"を表示して、ルビ"にほんはし"を下段に表示して下さい
+【追加問題２】
+問１０のGoogleのリンクを、「HTML」で検索した結果を表示するページのリンクにして下さい。
+【追加問題３】
+問７「枠無しで青い正四角形」を背景色をグラディエーション（青と赤の斜めグラディエーション）にして下さい。
+
+-->
+
+
+  <div>こんにちは</div>
+  <div>さようなら</div>
+  
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML入門</title>
+
+    <style>
+        .bc-ccc { background-color: #ccc; }
+    </style>
+</head>
+<body>
+    <div style="display: flex; text-align: center;">
+    
+        <!-- 結合後テーブル -->
+        <table border="1">
+            <tr>
+                <th>見出1</th>
+                <th>見出2</th>
+                <th>見出3</th>
+                <th>見出4</th>
+                <th>見出5</th>
+            </tr>
+            <tr>
+                <td>セル1</td>
+                <td>セル2</td>
+                <td>セル3</td>
+                <td>セル4</td>
+                <td>セル5</td>
+            </tr>
+            <tr>
+                <td>セル1</td>
+                <td>セル2</td>
+                <td>セル3</td>
+                <td>セル4</td>
+                <td>セル5</td>
+            </tr>
+            <tr>
+                <td>セル1</td>
+                <td>セル2</td>
+                <td>セル3</td>
+                <td>セル4</td>
+                <td>セル5</td>
+            </tr>
+            <tr>
+                <td>セル1</td>
+                <td>セル2</td>
+                <td>セル3</td>
+                <td>セル4</td>
+                <td>セル5</td>
+            </tr>
+        </table>
+        <p style="margin: 65px 10px;"> → セル結合 → </p>
+        
+        <!-- 結合後テーブル -->
+        <table border="1">
+            <tr>
+                <th colspan="5" class="bc-ccc">横結合</th>
+            </tr>
+            <tr>
+                <td>セル1</td>
+                <td>セル2</td>
+                <td>セル3</td>
+                <td>セル4</td>
+                <td>セル5</td>
+            </tr>
+            <tr>
+                <td>セル1</td>
+                <td>セル2</td>
+                <td rowspan="3" class="bc-ccc">縦結合</td>
+                <td>セル4</td>
+                <td>セル5</td>
+            </tr>
+            <tr>
+                <td>セル1</td>
+                <td>セル2</td>
+
+                <td rowspan="2" colspan="2" class="bc-ccc">２＊２</td>
+            </tr>
+            <tr>
+                <td>セル1</td>
+                <td>セル2</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

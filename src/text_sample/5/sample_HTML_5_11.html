@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML入門</title>
+    <link rel="icon" href="sample.png">
+    <style>
+
+        .h1-box {
+            /* 上下余白:10px, 左右:中央揃え（auto） */
+            margin: 10px auto;
+            width: 500px; /* 横幅:500px */
+            background-color: #00ff00; /* 背景色:緑 */
+            /* marginの余白には、要素内の背景プロパティは適用されない */
+        }
+        .flex {
+            display: flex;
+        }
+        p {
+            text-align: center;
+        }
+        .border-size {
+            margin: 20px;
+            width: 100px;
+            height: 100px;
+            background-color: gold; /* 背景色:金色 */
+            /* marginの余白には、要素内の背景プロパティは適用されない */
+        }
+
+        .border-box {
+            border: #f00 ridge 10px;
+        }
+        .border-circle-30 {
+            border: #000 dotted 10px;
+            border-radius: 30px;
+        }
+        .border-circle-top-right {
+            border: #000 double 10px;
+            border-top-right-radius: 50px;
+            border-width: 10px;
+        }
+        .border-circle {
+            border: #000 solid 10px;
+            border-radius: 50%; /* 角丸の半径を要素サイズの50％に指定 */
+        }
+    </style>
+
+</head>
+<body>
+    <h1 class="h1-box">見出し（中央寄せ）</h1>
+    <div class="flex">
+        <div>
+            <p>四角形</p>
+            <div class="border-size border-box"></div>
+            <p>罫線の種類：ridge</p>
+        </div>
+        <div>
+            <p>角丸</p>
+            <div class="border-size border-circle-30"></div>
+            <p>罫線の種類：dotted</p>
+        </div>
+        <div>
+            <p>一カ所丸</p>
+            <div class="border-size border-circle-top-right"></div>
+            <p>罫線の種類：double</p>
+        </div>
+        <div>
+            <p>真円：border-radius: 50%</p>
+            <div class="border-size border-circle"></div>
+            <p>罫線の種類：solid</p>
+        </div>
+    </div>
+</body>
+</html>

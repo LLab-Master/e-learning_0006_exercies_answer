@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* スクロールトップボタンのスタイル */
+    #scrollToTopBtn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      padding: 10px;
+      background-color: #007bff;
+      color: #fff;
+      font-size: large;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 120px;
+      height: 100px;
+    }
+    
+    table {
+      border-collapse: collapse;
+      width: 80%;
+      margin: 20px auto;
+    }
+
+    th, td {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+
+    th {
+      background-color: #f2f2f2;
+      min-width: 150px;
+    }
+  </style>
+  <title>Scroll Top Button</title>
+</head>
+<body>
+
+  <h1>春の季語一覧</h1>
+
+  <table>
+    <thead>
+      <tr>
+        <th>季語</th>
+        <th>説明</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>桜</td>
+        <td>春の代表的な花で、桜の花見が行われる。</td>
+      </tr>
+      <tr>
+        <td>新緑</td>
+        <td>樹木が新しい葉をつけ、鮮やかな緑になる季節。</td>
+      </tr>
+      <tr>
+        <td>卒業式</td>
+        <td>学校や大学などで卒業式が行われる季節。</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h1>夏の季語一覧</h1>
+
+  <table>
+    <thead>
+      <tr>
+        <th>季語</th>
+        <th>説明</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>夏至</td>
+        <td>太陽が一年で最も高く昇る日で、夏の始まりを示す。</td>
+      </tr>
+      <tr>
+        <td>海水浴</td>
+        <td>夏に海で泳ぐためのレクリエーション。</td>
+      </tr>
+      <tr>
+        <td>かき氷</td>
+        <td>氷を削ってできた氷菓子。夏の涼を楽しむ食べ物。</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h1>秋の季語一覧</h1>
+
+  <table>
+    <thead>
+      <tr>
+        <th>季語</th>
+        <th>説明</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>紅葉</td>
+        <td>木々の葉が色づく季節で、美しい風景が広がる。</td>
+      </tr>
+      <tr>
+        <td>収穫祭</td>
+        <td>農産物の収穫を祝う行事が行われる季節。</td>
+      </tr>
+      <tr>
+        <td>七五三</td>
+        <td>3歳、5歳、7歳の子供たちの成長を祝う日。</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h1>冬の季語一覧</h1>
+
+  <table>
+    <thead>
+      <tr>
+        <th>季語</th>
+        <th>説明</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>雪</td>
+        <td>冬の代表的な天候で、雪景色が広がる。</td>
+      </tr>
+      <tr>
+        <td>クリスマス</td>
+        <td>12月25日に祝われるキリスト教の祭り。プレゼント交換が行われる。</td>
+      </tr>
+      <tr>
+        <td>鍋料理</td>
+        <td>寒い季節に温かい鍋料理が人気。</td>
+      </tr>
+      <tr>
+        <td>初雪</td>
+        <td>冬季最初の降雪で、特に喜ばれる。</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- スクロールトップボタン -->
+  <button id="scrollToTopBtn" onclick="scrollToTop()">Topに戻る</button>
+
+<script>
+// スクロールトップボタンの要素を取得
+var scrollToTopBtn = document.getElementById('scrollToTopBtn');
+
+// Topに戻るボタンがクリックされたときの処理
+function scrollToTop() {
+  // スムーズなスクロールトップを実現するためのアニメーション
+  var scrollToTopAnimation = requestAnimationFrame(function animateScrollTop() {
+    // 現在のスクロール位置を取得
+    var scrollTop = window.scrollY || document.documentElement.scrollTop;
+
+    // スクロール位置が0未満になるまでアニメーションを継続
+    if (scrollTop > 0) {
+      window.scrollTo(0, scrollTop - Math.min(scrollTop, 20));
+      scrollToTopAnimation = requestAnimationFrame(animateScrollTop);
+    } else {
+      // アニメーションが終了したらリクエストをキャンセル
+      cancelAnimationFrame(scrollToTopAnimation);
+    }
+  });
+}
+</script>
+
+</body>
+</html>

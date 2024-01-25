@@ -1,0 +1,29 @@
+.bc-gray{ background-color: gray; }
+
+.box{
+    display: inline-block;
+}
+
+.flex_box{
+    display: flex;
+}
+/* 中央寄せ */
+.box1{
+    border: solid 3px black;
+    width: 100px;
+    height: 100px;
+}
+.box2{
+    background-color: blue;
+    width: 100px;
+    height: 100px;
+}
+
+.text-content{
+    border: solid 3px black;
+    display: inline-block;
+}
+
+.ruby-bottom{
+    ruby-position: under;
+}
