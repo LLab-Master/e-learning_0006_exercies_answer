@@ -1,0 +1,13 @@
+/* タイプセレクタ：要素名 */
+/* 全てのdiv要素の文字を、赤色、サイズ18pxにする */
+div {color:#ff0000; font-size:18pt}
+
+
+/* クラスセレクタ： . クラス名（クラス名の前にドットを記述する） */
+/* 属性 class=“bc-green”を設定した要素の背景色を緑色にする */
+.bc-green {background-color: #00ff00;}
+
+
+/* IDセレクタ：#id名 （ id名の前に#を記述する） */
+/* 属性 id=“line-bottom-red”を設定した要素の赤い下線を引く */
+#line-bottom-red {border-bottom :5px solid red;}

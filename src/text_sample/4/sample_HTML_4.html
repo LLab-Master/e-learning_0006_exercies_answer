@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML入門</title>
+    <link rel="icon" href="../img/sample.png">
+</head>
+<body>
+    <form>
+        <!-- テキスト入力(1行) -->
+        <p>名前：<input type="text" name="username" value="田中 一郎"></p>
+
+        <!-- テキスト入力(複数行) -->
+        <p>その他：<textarea name="other" rows="3" cols="20"></textarea></p>
+
+        <!-- パスワード -->
+        <p>パスワード：<input type="password" name="password"></p>
+
+        <!-- ラジオボタン（単一選択） -->
+        <p>
+            <!-- checked：初期状態でチェックがついた状態になる -->
+            <input type="radio" name="color" value="red" checked>赤 
+            <input type="radio" name="color" value="green">緑
+            <input type="radio" name="color" value="blue">青
+        </p>
+
+        <!-- チェックボックス（複数選択） -->
+        <p>
+            <!-- checked：初期状態でチェックがついた状態になる -->
+            <input type="checkbox" name="interest" value="sports" checked>スポーツ
+            <input type="checkbox" name="interest" value="movie" checked>映画
+            <input type="checkbox" name="interest" value="reading">読書
+        </p>
+
+        <!-- ドロップダウン -->
+        <p>
+            <!-- 
+                selected：初期値として選択状態になる。
+                selectedが無い場合は、最初の選択肢が初期値になる 
+            
+            -->
+            <select name="bloodtype">
+                <option value="A">A型</option>
+                <option value="B">B型</option>
+                <option value="O">O型</option>
+                <option value="AB">AB型</option>
+            </select>
+        </p>
+
+        <!-- 送信ボタン -->
+        <p>
+            <!-- 
+                value：送信される値 と ボタンに表示される文字列 を兼ねる。
+                省略時：ブラウザによって異なる
+            -->
+            <input type="submit" name="login" value="ログイン">
+        </p>
+
+        <!-- 送信ボタン -->
+        <p>
+            <!-- 
+                value：送信される値 と ボタンに表示される文字列 を兼ねる。
+                省略時：ブラウザによって異なる
+            -->
+            <input type="submit" name="login" value="ログイン">
+        </p>
+
+        <!-- 隠し項目：ユーザーid=001 -->
+        <div>
+            <!-- ブラウザには表示されない、value属性の値が送信される  -->
+            <form>
+                <input type="text" name="text1" value="表示される値">
+                <input type="hidden" name="hidden1" value="非表示な値">
+                <button type="submit">送信</button>
+            </form>
+        </div>
+
+    </form>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML入門</title>
+    <link rel="icon" href="../img/sample.png">
+</head>
+<body>
+    <h1>飲み会アンケート</h1>
+    <form action="" method="post">
+        <!-- ラジオボタン：食べたいもの -->
+        <div>
+            <h4>食べたいもの：</h4>
+            <input type="radio" name="food" value="焼き鳥">焼き鳥
+            <input type="radio" name="food" value="お好み焼き">お好み焼き
+            <input type="radio" name="food" value="海鮮">海鮮
+            <input type="radio" name="food" value="イタリアン">イタリアン
+        </div>
+        
+        <!-- チェックボックス：飲みたいもの（複数選択可） -->
+        <div>
+            <h4>飲みたいもの（複数選択可）：</h4>
+            <input type="checkbox" name="drink" value="ビール">ビール
+            <input type="checkbox" name="drink" value="ワイン">ワイン
+            <input type="checkbox" name="drink" value="ウィスキー">ウィスキー
+            <input type="checkbox" name="drink" value="日本酒">日本酒
+            <input type="checkbox" name="drink" value="ソフトドリンク">ソフトドリンク
+        </div>
+
+        <!-- ドロップダウン：希望場所 -->
+        <div>
+            <h4>希望場所：
+                <select name="location">
+                    <option value="新宿">新宿</option>
+                    <option value="品川">品川</option>
+                    <option value="横浜">横浜</option>
+                </select>
+            </h4>
+        </div>
+
+        <!-- 送信ボタン -->
+        <div>
+            <input type="submit" value="回答する">
+
+            <!-- ボタン要素で作る場合 
+                <button type="submit">回答する</button> 
+            -->
+        </div>
+
+        <!-- 隠し項目：ユーザーid=001 -->
+        <div>
+            <!-- ブラウザには表示されない、value属性の値が送信される  -->
+            <input type="hidden" name="user_id" value="001">
+        </div>
+        
+    </form>
+</body>
+</html>
